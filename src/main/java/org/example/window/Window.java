@@ -29,12 +29,6 @@ public abstract class Window implements WindowInterface {
         return windowTitle;
     }
 
-    @Override
-    public void routPage(String titleNextPage) {
-        WindowInterface nextPage = this.findWindowByTitle(titleNextPage);
-        nextPage.show();
-    }
-
     public WindowInterface findWindowByTitle(String title){
         return subWindows.stream()
                 .filter(window -> window.getWindowTitle().equals(title))
