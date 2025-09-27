@@ -2,7 +2,7 @@ package org.example.menu;
 
 public enum MenuHome implements MenuOptions {
     ModuleOne(1),
-    ModuleTwo(2);
+    EXIT(0);
 
     private final int value;
 

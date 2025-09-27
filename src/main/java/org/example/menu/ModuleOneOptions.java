@@ -1,6 +1,7 @@
 package org.example.menu;
 
 public enum ModuleOneOptions implements MenuOptions {
+    EXIT(0),
     EXERCISE_ONE(1),
     EXERCISE_TWO(2),
     EXERCISE_THREE(3),

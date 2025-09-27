@@ -66,7 +66,7 @@ public class ModuleOneWindow extends Window {
             action.setWindow(this);
         }else if (ModuleOneOptions.EXERCISE_SIX.getValue() == task) {
             Scanner scanner = new Scanner(System.in);
-            System.out.println("Insert grades of students: ");
+            System.out.println("Insert time value: ");
             HashMap<String, Integer> result =  moduleOne.exercise6(scanner.nextInt());
             System.out.println(result);
 
