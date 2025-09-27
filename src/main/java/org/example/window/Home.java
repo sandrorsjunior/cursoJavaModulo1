@@ -1,11 +1,9 @@
 package org.example.window;
 
 import org.example.menu.MenuHome;
-import org.example.menu.ModuleOneOptions;
 
-import java.awt.*;
 
-public class Home extends Window implements WindowInterface {
+public class Home extends Window {
     public Home() {
         super("HOME");
     }
@@ -16,20 +14,15 @@ public class Home extends Window implements WindowInterface {
     }
 
     @Override
-    public void routPage(String titleNextPage) {
-        WindowInterface nextPage = this.findWindowByTitle(titleNextPage);
-        nextPage.show();
-    }
-
-    @Override
-    public void Exec(int task) {
+    public WindowAction Exec(int task) {
+        WindowAction action = new WindowAction();
         if (MenuHome.ModuleOne.getValue() == task) {
-            this.routPage(MenuHome.ModuleOne.name());
-        } else if (MenuHome.ModuleTwo.getValue() == task) {
-            this.routPage(MenuHome.ModuleTwo.name());
-        }else {
+            action.setAction(Actions.ROUTE_PAGE);
+            action.setWindow(new ModuleOneWindow());
+        }else{
             throw new RuntimeException("Fudeu");
         }
+        return action;
     }
 
 }

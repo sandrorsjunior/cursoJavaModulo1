@@ -3,12 +3,13 @@ import org.example.menu.MenuHome;
 import org.example.menu.MenuOptions;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 
-public class Window {
+public abstract class Window implements WindowInterface {
     private final String windowTitle;
     static private int width;
-    private ArrayList<WindowInterface> subWindows;
+    private final ArrayList<WindowInterface> subWindows = new ArrayList<>();
     public Window(String windowTitle){
         width = 72;
         this.windowTitle = windowTitle;
@@ -18,8 +19,20 @@ public class Window {
         this.subWindows.add(window);
     }
 
+    @Override
+    public abstract void show();
+
+    @Override
+    public abstract WindowAction Exec(int task);
+
     public String getWindowTitle() {
         return windowTitle;
+    }
+
+    @Override
+    public void routPage(String titleNextPage) {
+        WindowInterface nextPage = this.findWindowByTitle(titleNextPage);
+        nextPage.show();
     }
 
     public WindowInterface findWindowByTitle(String title){

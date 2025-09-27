@@ -6,7 +6,8 @@ public enum ModuleOneOptions implements MenuOptions {
     EXERCISE_THREE(3),
     EXERCISE_FOUR(4),
     EXERCISE_FIVE(5),
-    EXERCISE_SIX(6);
+    EXERCISE_SIX(6),
+    HOME(7);
 
     private final int value;
     ModuleOneOptions(int value){

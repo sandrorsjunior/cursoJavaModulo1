@@ -5,5 +5,5 @@ public interface WindowInterface {
     //WindowInterface findWindowByTitle();
     String getWindowTitle();
     void routPage(String titleNextPage);
-    void Exec(int task);
+    WindowAction Exec(int task);
 }

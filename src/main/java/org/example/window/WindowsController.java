@@ -3,29 +3,22 @@ package org.example.window;
 import java.util.ArrayList;
 
 public class WindowsController {
-    private final WindowInterface defaultWindow;
-    private ArrayList<WindowInterface> windows;
+    private WindowInterface currentWindow;
 
-    public WindowsController(WindowInterface defaultWindow){
-        this.defaultWindow = defaultWindow;
-    }
-    public void addWindow(WindowInterface window){
-        this.windows.add(window);
+    public WindowsController(WindowInterface currentWindow){
+        this.currentWindow = currentWindow;
     }
 
-    public void defaultWindow(){
-        this.defaultWindow.show();
+    public void show(){
+        this.currentWindow.show();
     }
 
-    public WindowInterface findWindowByTitle(String title){
-        return windows.stream()
-                .filter(window -> window.getWindowTitle().equals(title))
-                .findFirst()
-                .orElse(null);
-    }
-
-    public WindowInterface routPage() {
-        return null;
+    public void ExecuteOptionFromWindow(int option){
+        WindowAction action = this.currentWindow.Exec(option);
+        if(action.getActions() == Actions.ROUTE_PAGE){
+            this.currentWindow = action.getWindow();
+        }
+        this.show();
     }
 
 }
