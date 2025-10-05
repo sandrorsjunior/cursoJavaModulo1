@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class Module3 {
+public class ModuleThree {
     public ArrayList<Integer> getParNumbers(int init, int end){
         ArrayList<Integer> result = new ArrayList<>();
         init = init%2 == 0 ? init : init+1;

@@ -19,7 +19,10 @@ public class Home extends Window {
         if (MenuHome.ModuleOne.getValue() == task) {
             action.setAction(Actions.ROUTE_PAGE);
             action.setWindow(new ModuleOneWindow());
-        }else{
+        } else if (MenuHome.ModuleTwo.getValue() == task) {
+            action.setAction(Actions.ROUTE_PAGE);
+            action.setWindow(new ModuleTwoWindow());
+        } else{
             throw new RuntimeException("Fudeu");
         }
         return action;

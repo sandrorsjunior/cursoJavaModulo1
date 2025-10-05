@@ -1,13 +1,13 @@
 package org.example.menu;
 
-public enum MenuHome implements MenuOptions {
-    ModuleOne(1),
-    ModuleTwo(2),
-    EXIT(0);
+public enum ModuleThreeOptions implements MenuOptions {
+    EXIT(0),
+    EXERCISE_TWO(2),
+    EXERCISE_EIGHT(8),
+    HOME(7);
 
     private final int value;
-
-    MenuHome(int value) {
+    ModuleThreeOptions(int value){
         this.value = value;
     }
 
