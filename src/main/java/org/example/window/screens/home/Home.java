@@ -1,6 +1,9 @@
-package org.example.window;
+package org.example.window.screens.home;
 
 import org.example.menu.MenuHome;
+import org.example.window.*;
+import org.example.window.screens.home.subScreens.ModuleOneWindow;
+import org.example.window.screens.home.subScreens.ModuleTwoWindow;
 
 
 public class Home extends Window {

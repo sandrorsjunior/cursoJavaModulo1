@@ -1,6 +1,10 @@
-package org.example.window;
+package org.example.window.screens.home.subScreens;
 import org.example.exercise.ModuleOne;
 import org.example.menu.ModuleOneOptions;
+import org.example.window.Actions;
+import org.example.window.Window;
+import org.example.window.WindowAction;
+import org.example.window.screens.home.Home;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
 package org.example;
 
-import org.example.menu.MenuHome;
 import org.example.window.*;
+import org.example.window.screens.home.Home;
 
 import java.util.Scanner;
 
