@@ -3,6 +3,7 @@ package org.example.window.screens.home;
 import org.example.menu.MenuHome;
 import org.example.window.*;
 import org.example.window.screens.home.subScreens.ModuleOneWindow;
+import org.example.window.screens.home.subScreens.ModuleThreeWindow;
 import org.example.window.screens.home.subScreens.ModuleTwoWindow;
 
 
@@ -25,7 +26,10 @@ public class Home extends Window {
         } else if (MenuHome.ModuleTwo.getValue() == task) {
             action.setAction(Actions.ROUTE_PAGE);
             action.setWindow(new ModuleTwoWindow());
-        } else{
+        }else if (MenuHome.ModuleThree.getValue() == task) {
+            action.setAction(Actions.ROUTE_PAGE);
+            action.setWindow(new ModuleThreeWindow());
+        }else{
             throw new RuntimeException("Fudeu");
         }
         return action;
